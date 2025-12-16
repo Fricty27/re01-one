@@ -1,53 +1,121 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-
-<title>我是谁？</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flex布局跟练</title>
+    <style>
+        body{
+            margin: 0;
+            height: 100vh;
+            background-color: antiquewhite;
+        }
+        /* *{
+            border: 1px solid rgba(190, 147, 36, 0.716);
+        } */
+        .yinying{
+            box-shadow: rgb(0 0 0 / 20%) 0px 2px 1px -1px,
+          rgb(0 0 0 / 14%) 0px 1px 1px 0px, rgb(0 0 0 / 12%) 0px 1px 3px 0px;
+        }
+        .flex{
+            display: flex;
+        }
+        .beijingSe{
+            background-color: rgb(255, 255, 255);
+        }
+        .flex1{
+            flex:1;
+        }
+        .column{
+            flex-direction: column;
+        }
+        .mg8{
+            margin: 8px;
+        }
+        .mgr8{
+            margin-right: 8px;
+        }
+        .mgt8{
+            margin-top: 8px;
+        }
+        .daohang{
+            padding: 10px 20px;
+            border-bottom: 3px solid #d7686e76;
+            font-size: 15px;
+            color: #371113f8;
+        }
+        @media (max-width:600px) {
+            .cebian{
+                display: none;
+            }
+            .neirong{
+                flex-direction: column;
+            }
+            .shuju{
+                flex-direction: column;
+            }
+            .youqu{
+                margin-left: 8px;
+            }
+            .shuju{
+                margin: 0 0 8px;
+                flex: auto;
+            }
+        }
+    </style>
 </head>
-<body>
-<div style="
-	background-color: #8C2F73;
-	text-align:center;
-	padding:25px;
-">
-	<img src="https://fricty27.github.io/re01-one/heguozi.png" 
-		 alt="顶部头像" width="120px" height="120px">
-</div>
-	
-<div style="
-	background-color: #FFC0CB;
-	text-align:center;
-	padding:20px;
-	color:#503A3F;
-">
-	<h1>桃井 爱莉</h1>
-    <h2>“你真的认为你能这样成为偶像吗！？”</h2>
-</div>
-<div style="
-	max-width:700px;
-	margin:23px auto;
-	padding:15px;
-	line-height:1.7;
-">
-    <p>爱莉是宫益坂女子学园的二年级生，MORE MORE JUMP!的一员，曾经在各种节目中大受欢迎的前偶像。</p>
-	<p>有着自信、强势的一面，同时对偶像的工作有着爱、热情和强烈的自豪感。</p>
-	<p>现在，因为某种原因辞去了事务所的工作，偶像也引退了。</p>
-	<p>对后辈有些严厉，但也是一个可靠的人。</p>
-</div>
-<div style="
-	background-color: #FFD1DA;
-	text-align:center;
-	padding:24px;
-	color:grey;
-">	
-	<p>正在严肃食用 和菓子</p>
-    <a href = "https://ak.hypergryph.com/">开始唤醒</a>
-</div>
-	
-
-	
-
-
-	
+<body class="flex">
+    <!--侧边栏-->
+    <div style="width: 200px; z-index: 2;" class="cebian beijingSe yinying">
+        <!--头像栏-->
+        <div style="padding: 10px; align-items: center; justify-content: center; border-bottom: 1px solid #CE30B4;" class="flex">
+            <img src="https://fricty27.github.io/re01-one/heguozi.png" width="40px" height="40px">
+        <div style="margin-left: 10px;">桃井爱莉</div>
+        </div>
+        <!--导航栏-->
+        <div class="flex1">
+            <div class="daohang">导航</div>
+            <div class="daohang">导航</div>
+            <div class="daohang">导航</div>
+            <div class="daohang">导航</div>
+        </div>
+    </div>
+    <!--主区域-->
+    <div class="flex1 flex column">
+        <!--头部栏-->
+        <div style="height: 60px; z-index: 1;" class="beijingSe yinying"></div>
+        <!--内容区-->
+        <div style="overflow: auto;" class="neirong flex1 flex">
+            <!--左区-->
+            <div style="flex:3;" class="flex column mg8">
+                <!--数据区-->
+                <div class="flex shuju">
+                    <!--数据块-->
+                    <div style="height: 100px;" class="shuju flex1 beijingSe mgr8 yinying"></div>
+                    <div style="height: 100px;" class="shuju flex1 beijingSe mgr8 yinying"></div>
+                    <div style="height: 100px;" class="shuju flex1 beijingSe mgr8 yinying"></div>
+                    <div style="height: 100px;" class="shuju flex1 beijingSe yinying"></div>
+                </div>
+                <!--列表区-->
+                <div>
+                    <!--列表项-->
+                    <div style="height: 160px;" class="flex1 beijingSe mgt8 yinying"></div>
+                    <div style="height: 160px;" class="flex1 beijingSe mgt8 yinying"></div>
+                    <div style="height: 160px;" class="flex1 beijingSe mgt8 yinying"></div>
+                    <div style="height: 160px;" class="flex1 beijingSe mgt8 yinying"></div>
+                    <div style="height: 160px;" class="flex1 beijingSe mgt8 yinying"></div>
+                    <div style="height: 160px;" class="flex1 beijingSe mgt8 yinying"></div>
+                    <div style="height: 160px;" class="flex1 beijingSe mgt8 yinying"></div>
+                </div>
+            </div>
+            <!--右区-->
+            <div style="flex:1;" class="youqu flex column mgr8 mgt8">
+                <!--消息区-->
+                <div style="height:150px" class="beijingSe yinying"></div>
+                <!--提示区-->
+                <div style="height:300px" class="beijingSe mgt8 yinying"></div>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
